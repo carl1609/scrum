@@ -1,0 +1,22 @@
+Cambios en el modelo Tarea:
+-se cambio el atributo titulo para que no pudiera ser  nulo ni un espacio en blanco ya que tiene sentido que una 
+tarea no contenga titulo.
+-se cambio el atributo descripcion a que no pueda ser nulo ni un espacio en blanco ya que la descripcion
+es lo que indica de como se va a relizar la tarea y de que se va a tratar.
+-se cambio el atributo fecha_creacion para que no pueda ser nula y haci poder tener un conocimiento exacto de cuando se establecio 
+la tarea.
+
+Cambios en el modelo Sprint:
+-se cambio el atributo titulo para que no se puedan poner valores nulos ni en blanco para que el sprint se reconosible.
+-se cambio el atibuto objetivo  para que no se puedan poner valores nulos ni en blanco para que el sprint pueda tener un objetivo claro.
+-se cambio el atributo fecha_inicio y fecha_fin para que no se puedan poner valores nulos ni en blanco para asegurarnos que el sprint
+tenga un tiempo determinado 
+-se cambio el atributo equipo_asignado a blank false  ya que el sprint tiene que tener un equipo asignado.
+-se cambio el atributo backlog_sprint a blank false  ya que un sprint sin tareas no tendria sentido. 
+
+Cambios en el modelo Epica:
+-se cambio el atributo titulo para que no se puedan poner valores nulos ni en blanco ya que no tiene sentido que una epica no tenga un titulo.
+-se cambio el atributo descripcion para que no se puedan poner valores nulo ni en blanco ya que la descripcion es lo que define que es lo que hay que hacer 
+-se cambio el atributo fecha_inicio y fecha_fin para que no se puedan poner valores nulos ni en blanco para asegurarnos que la epica
+tenga un tiempo determinadose
+-se cambio el atributo de tarea_asociadas a  blank false ya que no tiene sentido que una epica no tenga tareas asociadas

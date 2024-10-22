@@ -1,0 +1,39 @@
+user = User.objects.create_user('juan', 'juan@example.com', 'contraseña123')
+s2=carlitos,carlitos@gmail.com,carlitos123
+
+sprints
+sprint = Sprint.objects.create(
+    nombre="Sprint 1",
+    objetivo="Completar la primera iteración",
+    fecha_inicio=timezone.now().date(),
+    fecha_fin=timezone.now().date() + timezone.timedelta(days=14),
+    velocidad=30,
+    scrum_master=user
+)
+tarea = Tarea.objects.create(
+    titulo="Tarea de Prueba",
+    descripcion="Descripción de la tarea de prueba",
+    criterios_aceptacion="Todos los tests deben pasar",
+    prioridad=1,
+    estado='POR_HACER',
+    esfuerzo_estimado=5,exut
+    responsable=user,
+    sprint_asignado=sprint,
+    fecha_creacion=timezone.now(),
+    fecha_actualizacion=timezone.now()
+)
+tarea.save()
+epica = Epica.objects.create(
+    nombre="Épica de Prueba",
+    descripcion="Descripción de la épica de prueba",
+    criterios_aceptacion="Todos los objetivos deben cumplirse",
+    estado=Epica.POR_HACER,
+    responsable=user,
+    esfuerzo_estimado_total=40,
+    fecha_inicio=timezone.now().date(),
+    fecha_fin=timezone.now().date() + timezone.timedelta(days=60),
+    progreso=0.0
+)
+epica.tareas_asociadas.add(tarea)
+epica.save()
+
